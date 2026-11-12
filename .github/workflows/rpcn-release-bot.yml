@@ -42,7 +42,7 @@ jobs:
       # needs the `chat:write` scope and must be a member of the channel.
       - name: Post release thread
         id: thread
-        uses: slackapi/slack-github-action@v3.0.1
+        uses: slackapi/slack-github-action@v4.0.0
         with:
           method: chat.postMessage
           token: ${{ secrets.SLACK_BOT_TOKEN_RELEASE }}
@@ -54,7 +54,7 @@ jobs:
             text: ":redpanda: RPCN v${{ steps.version.outputs.next }} Release"
 
       - name: Ask for release changes in thread
-        uses: slackapi/slack-github-action@v3.0.1
+        uses: slackapi/slack-github-action@v4.0.0
         with:
           method: chat.postMessage
           token: ${{ secrets.SLACK_BOT_TOKEN_RELEASE }}
