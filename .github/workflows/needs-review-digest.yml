@@ -184,7 +184,7 @@ jobs:
 
       - name: Post to Slack
         if: steps.list.outputs.count != '0'
-        uses: slackapi/slack-github-action@v3.0.1
+        uses: slackapi/slack-github-action@v4.0.0
         with:
           webhook: ${{ secrets.SLACK_WEBHOOK_URL_PR_REVIEW }}
           webhook-type: incoming-webhook
